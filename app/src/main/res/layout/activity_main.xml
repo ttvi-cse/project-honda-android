@@ -7,14 +7,7 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <com.daimajia.slider.library.SliderLayout
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/flash_advertisement_height"
-        custom:auto_cycle="true"
-        custom:indicator_visibility="invisible"
-        android:id="@+id/advertisement">
-
-    </com.daimajia.slider.library.SliderLayout>
+    <include layout="@layout/advertisement" />
 
     <LinearLayout
         android:orientation="horizontal"

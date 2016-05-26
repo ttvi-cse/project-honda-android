@@ -1,6 +1,5 @@
 package com.honda.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentActivity;
@@ -22,6 +21,7 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(getLayoutViewResId());
 
         if(showAdvertisement()) {
             advertisement = (SliderLayout) findViewById(R.id.advertisement);
@@ -29,7 +29,8 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
         }
     }
 
-    abstract boolean showAdvertisement();
+    protected abstract int getLayoutViewResId();
+    protected abstract boolean showAdvertisement();
 
     private void setupAdvertisement() {
         HashMap<String, Integer> file_maps = new HashMap<>();
@@ -46,8 +47,13 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
                     .setOnSliderClickListener(this);
             advertisement.addSlider(textSliderView);
             advertisement.setPresetTransformer(SliderLayout.Transformer.Fade);
-//            advertisement.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
             advertisement.setDuration(4000);
         }
+    }
+
+    @Override
+    protected void onStop() {
+        advertisement.stopAutoCycle();
+        super.onStop();
     }
 }

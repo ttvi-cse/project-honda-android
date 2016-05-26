@@ -28,7 +28,7 @@ import com.honda.R;
 
 import java.util.HashMap;
 
-public class SearchActivity extends FragmentActivity implements
+public class SearchActivity extends BaseActivity implements
         OnMapReadyCallback,
         GoogleApiClient.ConnectionCallbacks,
         GoogleApiClient.OnConnectionFailedListener,
@@ -44,26 +44,16 @@ public class SearchActivity extends FragmentActivity implements
     private GoogleApiClient googleApiClient;
 
     private RelativeLayout home;
-    private SliderLayout advertisement;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_search);
 
         home = (RelativeLayout) findViewById(R.id.home);
-        advertisement = (SliderLayout) findViewById(R.id.advertisement);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SearchActivity.this, MainActivity.class));
-            }
-        });
-        advertisement.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(SearchActivity.this, AdvertisingActivity.class);
-                startActivity(i);
             }
         });
 
@@ -106,27 +96,16 @@ public class SearchActivity extends FragmentActivity implements
             }
         });
 
-        setupAdvertisement();
     }
 
-    private void setupAdvertisement() {
-        HashMap<String, Integer> file_maps = new HashMap<>();
-        file_maps.put("oil_change_2", R.drawable.oil_change_2);
-        file_maps.put("oil_change_3", R.drawable.oil_change_3);
-        file_maps.put("oil_change_5", R.drawable.oil_change_5);
-        file_maps.put("oil_change_6", R.drawable.oil_change_6);
+    @Override
+    protected int getLayoutViewResId() {
+        return R.layout.activity_search;
+    }
 
-        for (String name : file_maps.keySet()) {
-            DefaultSliderView textSliderView = new DefaultSliderView(this);
-            textSliderView
-                    .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
-                    .setOnSliderClickListener(this);
-            advertisement.addSlider(textSliderView);
-            advertisement.setPresetTransformer(SliderLayout.Transformer.Fade);
-//            advertisement.setCustomIndicator((PagerIndicator) findViewById(R.id.custom_indicator));
-            advertisement.setDuration(4000);
-        }
+    @Override
+    protected boolean showAdvertisement() {
+        return true;
     }
 
     @Override
@@ -156,7 +135,6 @@ public class SearchActivity extends FragmentActivity implements
 
     @Override
     protected void onStop() {
-        advertisement.stopAutoCycle();
         googleApiClient.disconnect();
         super.onStop();
     }
