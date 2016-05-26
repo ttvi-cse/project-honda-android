@@ -43,7 +43,7 @@
                 android:layout_width="@dimen/item_image_size"
                 android:layout_height="@dimen/item_image_size"
                 android:id="@+id/imageView"
-                android:src="@drawable/ic_maintenace" />
+                android:src="@drawable/ic_maintenance" />
 
             <TextView
                 android:layout_width="fill_parent"
