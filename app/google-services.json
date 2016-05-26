@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "888063981803",
+    "firebase_url": "https://honda-6d7f1.firebaseio.com",
+    "project_id": "honda-6d7f1",
+    "storage_bucket": "honda-6d7f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888063981803:android:4f1e5dd805f8c945",
+        "android_client_info": {
+          "package_name": "com.honda"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888063981803-4qs8edalp3suhat65nnbh9353n3c17oi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeZ52FS08-pywIBUDidY5JjOXD0ev4fcE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,36 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item_accident_alert_layout"
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="this is test message"
+        android:id="@+id/tv_name"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="this is test message"
+        android:id="@+id/tv_address"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="this is test message"
+        android:id="@+id/tv_phone_number"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp" />
+
+</LinearLayout>

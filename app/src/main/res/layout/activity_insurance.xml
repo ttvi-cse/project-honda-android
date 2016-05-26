@@ -1,0 +1,235 @@
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sub_title_height"
+            android:background="@color/sub_title_bg_color">
+
+            <ImageView
+                android:layout_width="@dimen/sub_title_height"
+                android:layout_height="@dimen/sub_title_height"
+                android:id="@+id/img_list_item"
+                android:layout_toLeftOf="@+id/tv_title"
+                android:padding="4dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/ic_insurance_renew" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/insurance_renewal_change"
+                android:id="@+id/tv_title"
+                android:gravity="center_vertical|center_horizontal"
+                android:textColor="@color/white"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/last_finish"
+                android:id="@+id/label1"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="23/7/2015"
+                android:id="@+id/tv_last_finish"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/green_stroke_rounded_rectangle"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/time_remaining"
+                android:id="@+id/label2"
+                android:layout_alignParentTop="false"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="Out of date"
+                android:id="@+id/tv_time_remaining"
+                android:textColor="@color/red"
+                android:layout_gravity="center_horizontal"
+                android:visibility="gone"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/label2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/green_stroke_rounded_rectangle" />
+
+            <com.honda.uicomponent.TextProgressBar
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pb_time_remaining"
+                android:max="100"
+                android:progress="0"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/orange_progressbar"
+                android:layout_below="@+id/label2"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="24dp"
+                android:maxHeight="24dp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/due_mileage"
+                android:id="@+id/label3"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="23/3/2016"
+                android:id="@+id/tv_due_mileage"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/green_stroke_rounded_rectangle"
+                android:visibility="gone" />
+
+            <com.honda.uicomponent.TextProgressBar
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/pb_due_mileage"
+                android:max="100"
+                android:progress="0"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:progressDrawable="@drawable/orange_progressbar"
+                android:layout_below="@+id/label2"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="24dp"
+                android:maxHeight="24dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/list_item_height"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_mileage"
+                android:id="@+id/textView"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginRight="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27557"
+                android:id="@+id/tv_cur_mileage"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:background="@drawable/green_stroke_rounded_rectangle"
+                android:textColor="@color/black"
+                android:layout_marginRight="8dp" />
+
+            <ImageButton
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/btn_edit"
+                android:src="@drawable/btn_edit"
+                android:layout_marginLeft="8dp"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_navigation_height"
+        android:gravity="center_horizontal"
+        android:id="@+id/bottom_bar"
+        android:weightSum="1"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"></LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="6dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:id="@+id/home">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:id="@+id/imageView7"
+                android:src="@drawable/ic_home"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home"
+                android:id="@+id/textView9"
+                android:layout_below="@+id/imageView7"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

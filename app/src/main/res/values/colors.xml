@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#795548</color>
+    <color name="colorPrimaryDark">#6D4C41</color>
+    <color name="colorAccent">#A1887F</color>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray">#b9b9b9</color>
+    <color name="home_screen_title_bg_color">#795548</color>
+    <color name="item_text_color">#c0003a</color>
+    <color name="bottom_navigation_bg_color">#795548</color>
+
+    <color name="flash_advertisement_bg_color">#795548</color>
+    <color name="sub_title_bg_color">#6c594b</color>
+    <color name="list_item_label_color">#2e75c2</color>
+    <color name="green">#42b64a</color>
+    <color name="yellow">#cedf29</color>
+    <color name="orange">#ffba10</color>
+    <color name="pink">#f76521</color>
+    <color name="red">#ce2021</color>
+    <color name="rectangle_stroke_color_green">#70ad47</color>
+    <color name="rectangle_stroke_color_black">#000000</color>
+
+    <color name="promotion_button_color">#ed7d31</color>
+
+    <color name="search_screen_title_bg_color">#ffd966</color>
+    <color name="search_screen_title_color">#c5713f</color>
+    <color name="btn_bg_color">#6c594b</color>
+
+    <color name="color_button_non_complete">#b9b9b9</color>
+    <color name="color_button_current">#87aafe</color>
+</resources>

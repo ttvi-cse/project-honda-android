@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Honda-Version-2</string>
+    <string name="car_app">CAR APP</string>
+
+    <string name="home">Home</string>
+    <string name="maintenance">Maintenance</string>
+    <string name="promotion">Promotion</string>
+    <string name="advertising">Advertising</string>
+    <string name="abumlance">Ambulance</string>
+    <string name="towing">Towing</string>
+
+    <string name="oil_change">Oil change</string>
+    <string name="tire_change">Tire change</string>
+    <string name="baterry_change">Baterry change</string>
+    <string name="insurance_renewal_change">Insurance renewal change</string>
+    <string name="insurance">Insurance</string>
+
+    <string name="last_finish">Last finish</string>
+    <string name="time_remaining">Time remaining</string>
+    <string name="due_mileage">Due mileage</string>
+    <string name="current_mileage">Current mileage</string>
+    <string name="overdue">Overdue</string>
+    <string name="test_due_mileage">25677</string>
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="title">Title</string>
+    <string name="call">CALL</string>
+    <string name="buy_now">BUY NOW</string>
+    <string name="show">SHOW</string>
+
+    <string name="payment_summary">PAYMENT SUMMARY</string>
+    <string name="quantity">Quantity</string>
+    <string name="total">Total</string>
+    <string name="payment_option">Payment option</string>
+    <string name="credit_card">Credit card</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="card_number">Card Number</string>
+    <string name="expiration_month">Expiration month</string>
+    <string name="year">Year</string>
+    <string name="security_code">Security code</string>
+    <string name="submit">Submit</string>
+
+    <string name="workshops_near_your">Workshops near you</string>
+    <string name="workshop_nearby">Workshop Nearby</string>
+    <string name="workshop_nearby_lowercase">Workshop nearby</string>
+    <string name="name">Name</string>
+    <string name="type_of_service">Type of service</string>
+    <string name="search">Search</string>
+    <string name="title_activity_maps">Map</string>
+
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-9907869262366494/2687598564</string>
+    <string name="interstitial_full_screen">ca-app-pub-9907869262366494/2687598564</string>
+
+    <string name="ambulance_service_advertising_title">24 Hours Ambulance Service</string>
+    <string name="battery_advertising_title">Century Marathoner Battery</string>
+    <string name="car_insurance_advertising_title">Car Insurance Advertising</string>
+    <string name="oil_change_advertising_title">Castrol Edge Professional Titanium FST</string>
+    <string name="oil_promotion_products_advertising_title">Up to $20 off</string>
+    <string name="towing_advertising_title">Decker Towing</string>
+
+
+    <string name="ambulance_service_advertising_content">- Timely response.\n- Responsible service.\n- Call:\n + 9866444108\n + 9246333108</string>
+    <string name="battery_advertising_content">
+        <!-- - WARRANTY: 12 MONTHS\n- PRICE INCLUDING TRADE IN OLD BATTERY\n- ADDITIONAL CHARGES FOR DELIVERY\n-->
+        - Warranty: 12 months\n- Price including trade in old battery\n- Additional charges for delivery\n
+    </string>
+    <string name="car_insurance_advertising_content">
+        With Wolfrace Insurance, you will receive a
+        10% DISCOUNT on any item purchased at wolfrace.com.
+    </string>
+    <string name="oil_change_advertising_content">
+        <!--CASTROL EDGE PROFESSIONAL TITANIUM FST DIN 1 APRILIE IN ROMANIA-->
+        Castrol edge professional titanium FST.\n
+    </string>
+    <string name="oil_promotion_products_advertising_content">
+        Go the distance time after time with our limited-time offer.
+    </string>
+    <string name="towing_advertising_content">
+        - Light towing services.\n- Flat bed services.\n- Private property removal.\n- Accident $ Recovery.\n- Emergency road service.\n- Carrier/Float services.
+    </string>
+    <string name="location_permission_denied" />
+    <string name="permission_required_toast" />
+    <string name="permission_rationale_location" />
+</resources>
