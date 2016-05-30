@@ -7,7 +7,10 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-    <include layout="@layout/advertisement" />
+    <include layout="@layout/advertisement"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="match_parent" />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -24,166 +27,197 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal">
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_weight="4">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/maintenance"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/black_stroke_rounded_rectangle">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView"
-                android:src="@drawable/ic_maintenance" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/maintenance"
-                android:id="@+id/textView2"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/maintenance"
                 android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView"
+                    android:src="@drawable/ic_maintenance" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/maintenance"
+                    android:id="@+id/textView2"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/promotion"
+                android:layout_toRightOf="@+id/maintenance"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView2"
+                    android:src="@drawable/ic_promotion" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/promotion"
+                    android:id="@+id/textView3"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/promotion"
-            android:layout_toRightOf="@+id/maintenance"
-            android:gravity="center_vertical|center_horizontal"
-            android:background="@drawable/black_stroke_rounded_rectangle">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView2"
-                android:src="@drawable/ic_promotion" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/promotion"
-                android:id="@+id/textView3"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/insurance"
+                android:layout_below="@+id/maintenance"
                 android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView3"
+                    android:src="@drawable/ic_insurance" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/insurance"
+                    android:id="@+id/textView4"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/ambumlance"
+                android:layout_below="@+id/maintenance"
+                android:layout_toRightOf="@+id/insurance"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/ic_ambulance" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/abumlance"
+                    android:id="@+id/textView5"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/insurance"
-            android:layout_below="@+id/maintenance"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/black_stroke_rounded_rectangle">
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="1"
+            android:gravity="center">
 
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView3"
-                android:src="@drawable/ic_insurance" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/insurance"
-                android:id="@+id/textView4"
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/towing"
+                android:layout_below="@+id/insurance"
                 android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView5"
+                    android:src="@drawable/ic_towing" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/towing"
+                    android:id="@+id/textView6"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/search"
+                android:layout_below="@+id/insurance"
+                android:layout_toRightOf="@+id/towing"
+                android:gravity="center_vertical|center_horizontal"
+                android:background="@drawable/black_stroke_rounded_rectangle"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="@dimen/item_image_size"
+                    android:layout_height="@dimen/item_image_size"
+                    android:id="@+id/imageView6"
+                    android:src="@drawable/ic_search" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/workshop_nearby"
+                    android:id="@+id/textView7"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textColor="@color/item_text_color" />
+            </LinearLayout>
         </LinearLayout>
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/ambumlance"
-            android:layout_below="@+id/maintenance"
-            android:layout_toRightOf="@+id/insurance"
-            android:gravity="center_vertical|center_horizontal"
-            android:background="@drawable/black_stroke_rounded_rectangle">
+    </LinearLayout>
 
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView4"
-                android:src="@drawable/ic_ambulance" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/abumlance"
-                android:id="@+id/textView5"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/towing"
-            android:layout_below="@+id/insurance"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_marginRight="40dp"
-            android:background="@drawable/black_stroke_rounded_rectangle">
-
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView5"
-                android:src="@drawable/ic_towing" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/towing"
-                android:id="@+id/textView6"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="@dimen/item_width"
-            android:layout_height="@dimen/item_height"
-            android:id="@+id/search"
-            android:layout_below="@+id/insurance"
-            android:layout_toRightOf="@+id/towing"
-            android:gravity="center_vertical|center_horizontal"
-            android:background="@drawable/black_stroke_rounded_rectangle">
-
-            <ImageView
-                android:layout_width="@dimen/item_image_size"
-                android:layout_height="@dimen/item_image_size"
-                android:id="@+id/imageView6"
-                android:src="@drawable/ic_search" />
-
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/workshop_nearby"
-                android:id="@+id/textView7"
-                android:gravity="center_vertical|center_horizontal"
-                android:textColor="@color/item_text_color" />
-        </LinearLayout>
-
-    </RelativeLayout>
 </LinearLayout>

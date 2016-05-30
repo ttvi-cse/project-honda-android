@@ -2,7 +2,7 @@
 <com.daimajia.slider.library.SliderLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/flash_advertisement_height"
+    android:layout_height="wrap_content"
     custom:auto_cycle="true"
     custom:indicator_visibility="invisible"
     android:id="@+id/advertisement">

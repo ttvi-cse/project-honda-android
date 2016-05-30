@@ -1,12 +1,12 @@
 package com.honda.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.honda.R;
 import com.honda.adapter.AdvertisingAdapter;
 import com.honda.data.Advertising;
@@ -14,7 +14,7 @@ import com.honda.data.Advertising;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AdvertisingActivity extends AppCompatActivity {
+public class AdvertisingActivity extends BaseActivity {
 
     private ListView listView;
     private RelativeLayout home;
@@ -22,7 +22,6 @@ public class AdvertisingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_advertising);
 
         listView = (ListView) findViewById(R.id.listView);
         home = (RelativeLayout) findViewById(R.id.home);
@@ -42,5 +41,20 @@ public class AdvertisingActivity extends AppCompatActivity {
                 startActivity(new Intent(AdvertisingActivity.this, MainActivity.class));
             }
         });
+    }
+
+    @Override
+    protected int getLayoutViewResId() {
+        return R.layout.activity_advertising;
+    }
+
+    @Override
+    protected boolean showAdvertisement() {
+        return false;
+    }
+
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+
     }
 }

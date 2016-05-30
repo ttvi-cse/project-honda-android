@@ -6,95 +6,108 @@
     android:layout_height="match_parent"
     android:background="@color/white">
 
-    <include layout="@layout/advertisement" />
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <include layout="@layout/advertisement"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/search_row_height"
-        android:gravity="center"
-        android:background="@color/gray">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="@string/workshop_nearby_lowercase"
-            android:id="@+id/textView16" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/search_row_height"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/list_item_left_margin"
-        android:paddingRight="@dimen/list_item_right_margin">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/name"
-            android:id="@+id/textView3"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <EditText
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_marginLeft="92dp"
-            android:background="@drawable/green_stroke_rectangle" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/search_row_height"
-        android:gravity="center_vertical"
-        android:paddingLeft="@dimen/list_item_left_margin"
-        android:paddingRight="@dimen/list_item_right_margin"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/type_of_service"
-            android:id="@+id/textView4"
-            android:textColor="@color/black"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/btn_dtopdown_menu"
-            android:layout_marginLeft="16dp" />
-
-    </LinearLayout>
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/search_row_height"
-        android:gravity="center_vertical|center_horizontal">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="32dp"
-            android:id="@+id/btn_search"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/search"
-            android:background="@drawable/blue_rounded_rectangle" />
-    </LinearLayout>
-
-    <fragment
-        android:id="@+id/map"
-        class="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="match_parent"
         android:layout_height="0dp"
-        xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".activity.SearchActivity"
-        android:layout_weight="0.1" />
+        android:layout_weight="4">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_row_height"
+            android:gravity="center"
+            android:background="@color/gray">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/workshop_nearby_lowercase"
+                android:id="@+id/textView16"
+                android:textSize="@dimen/font_size_18sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_row_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:id="@+id/textView3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_weight="2" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText"
+                android:background="@drawable/green_stroke_rectangle"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_row_height"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/list_item_left_margin"
+            android:paddingRight="@dimen/list_item_right_margin"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/type_of_service"
+                android:id="@+id/textView4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_16sp"
+                android:layout_weight="2" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_dtopdown_menu"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_row_height"
+            android:gravity="center_vertical|center_horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:id="@+id/btn_search"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/search"
+                android:background="@drawable/blue_rounded_rectangle"
+                android:textSize="@dimen/font_size_16sp" />
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            xmlns:tools="http://schemas.android.com/tools"
+            tools:context=".activity.SearchActivity"
+            android:layout_weight="0.1" />
+    </LinearLayout>
 
     <include layout="@layout/bottom_navigation" />
 

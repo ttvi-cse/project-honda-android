@@ -3,6 +3,7 @@ package com.honda.adapter;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -111,13 +112,13 @@ public class ServiceAdapter extends BaseAdapter {
                     pbTimeRemainning.setVisibility(View.VISIBLE);
                     pbTimeRemainning.setProgress(80);
                     pbTimeRemainning.setText("");
-                    pbTimeRemainning.setProgressDrawable(mContext.getDrawable(R.drawable.pink_progressbar));
+                    pbTimeRemainning.setProgressDrawable(ContextCompat.getDrawable(mContext, R.drawable.pink_progressbar));
 
                 } else {
                     pbTimeRemainning.setVisibility(View.VISIBLE);
                     pbTimeRemainning.setProgress(100);
                     pbTimeRemainning.setText(mContext.getString(R.string.overdue));
-                    pbTimeRemainning.setProgressDrawable(mContext.getDrawable(R.drawable.red_progressbar));
+                    pbTimeRemainning.setProgressDrawable(ContextCompat.getDrawable(mContext, R.drawable.red_progressbar));
                 }
 
                 if (s.getTitle() != null && !s.getTitle().equals("")) {
@@ -135,7 +136,7 @@ public class ServiceAdapter extends BaseAdapter {
                 pbDueMileage.setVisibility(View.VISIBLE);
                 pbDueMileage.setProgress(100);
                 pbDueMileage.setText(mContext.getString(R.string.test_due_mileage));
-                pbDueMileage.setProgressDrawable(mContext.getDrawable(R.drawable.red_progressbar));
+                pbDueMileage.setProgressDrawable(ContextCompat.getDrawable(mContext, R.drawable.red_progressbar));
 
                 tvCurrentMileage.setText(s.getCurMileage());
                 btnEdit.setOnClickListener(new View.OnClickListener() {

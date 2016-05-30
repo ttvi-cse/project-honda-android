@@ -2,7 +2,6 @@ package com.honda.activity;
 
 import android.content.Intent;
 import android.location.Location;
-import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,9 +10,7 @@ import android.widget.PopupMenu;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
@@ -25,8 +22,6 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.honda.R;
-
-import java.util.HashMap;
 
 public class SearchActivity extends BaseActivity implements
         OnMapReadyCallback,

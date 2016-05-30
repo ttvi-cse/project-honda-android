@@ -23,8 +23,10 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
         super.onCreate(savedInstanceState);
         setContentView(getLayoutViewResId());
 
+
         if(showAdvertisement()) {
             advertisement = (SliderLayout) findViewById(R.id.advertisement);
+//            advertisement.setMinimumeight(getWindowManager().get);
             setupAdvertisement();
         }
     }
@@ -43,7 +45,7 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
             DefaultSliderView textSliderView = new DefaultSliderView(this);
             textSliderView
                     .image(file_maps.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
+                    .setScaleType(DefaultSliderView.ScaleType.Fit)
                     .setOnSliderClickListener(this);
             advertisement.addSlider(textSliderView);
             advertisement.setPresetTransformer(SliderLayout.Transformer.Fade);
@@ -53,7 +55,9 @@ public abstract class BaseActivity extends FragmentActivity implements BaseSlide
 
     @Override
     protected void onStop() {
-        advertisement.stopAutoCycle();
+        if (showAdvertisement()) {
+            advertisement.stopAutoCycle();
+        }
         super.onStop();
     }
 }

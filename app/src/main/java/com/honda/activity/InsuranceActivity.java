@@ -4,8 +4,9 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 import com.honda.R;
 import com.honda.uicomponent.TextProgressBar;
 
-public class InsuranceActivity extends AppCompatActivity {
+public class InsuranceActivity extends FragmentActivity {
 
     private RelativeLayout home;
 
@@ -40,12 +41,12 @@ public class InsuranceActivity extends AppCompatActivity {
         pbTimeRemainning.setVisibility(View.VISIBLE);
         pbTimeRemainning.setProgress(80);
         pbTimeRemainning.setText("");
-        pbTimeRemainning.setProgressDrawable(getDrawable(R.drawable.pink_progressbar));
+        pbTimeRemainning.setProgressDrawable(ContextCompat.getDrawable(InsuranceActivity.this, R.drawable.pink_progressbar));
 
         pbDueMileage.setVisibility(View.VISIBLE);
         pbDueMileage.setProgress(100);
         pbDueMileage.setText(getString(R.string.test_due_mileage));
-        pbDueMileage.setProgressDrawable(getDrawable(R.drawable.red_progressbar));
+        pbDueMileage.setProgressDrawable(ContextCompat.getDrawable(InsuranceActivity.this, R.drawable.red_progressbar));
 
         ImageButton btnEdit = (ImageButton) findViewById(R.id.btn_edit);
         final TextView tvCurrentMileage = (TextView) findViewById(R.id.tv_cur_mileage);

@@ -5,15 +5,19 @@
     android:layout_height="match_parent"
     xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    tools:context=".activity.MaintenanceActivity">
+    tools:context=".activity.TowingActivity">
 
-    <include layout="@layout/advertisement" />
+    <include layout="@layout/advertisement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:id="@+id/listView"
-        android:layout_weight="0.1" />
+        android:layout_weight="4"
+        android:dividerHeight="8dp" />
 
     <include layout="@layout/bottom_navigation" />
 

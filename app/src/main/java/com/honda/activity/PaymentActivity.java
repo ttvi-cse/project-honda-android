@@ -1,7 +1,6 @@
 package com.honda.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,9 +9,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.honda.R;
 
-public class PaymentActivity extends AppCompatActivity implements OnClickListener {
+public class PaymentActivity extends BaseActivity implements OnClickListener {
 
     public static final String EXTRA_TITLE = "title";
 
@@ -36,7 +36,6 @@ public class PaymentActivity extends AppCompatActivity implements OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_payment);
 
         btnQuantityUp = (Button) findViewById(R.id.btn_quantity_up);
         btnQuantityDown = (Button) findViewById(R.id.btn_quantity_down);
@@ -75,6 +74,16 @@ public class PaymentActivity extends AppCompatActivity implements OnClickListene
     }
 
     @Override
+    protected int getLayoutViewResId() {
+        return R.layout.activity_payment;
+    }
+
+    @Override
+    protected boolean showAdvertisement() {
+        return false;
+    }
+
+    @Override
     public void onClick(View v) {
 
         switch (v.getId()) {
@@ -105,5 +114,10 @@ public class PaymentActivity extends AppCompatActivity implements OnClickListene
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onSliderClick(BaseSliderView slider) {
+
     }
 }

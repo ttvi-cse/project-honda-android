@@ -9,8 +9,9 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/payment_content_height"
-        android:background="@color/white">
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_weight="1">
 
         <TextView
             android:layout_width="match_parent"
@@ -20,7 +21,8 @@
             android:layout_weight="0.1"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-            android:paddingTop="8dp" />
+            android:paddingTop="8dp"
+            android:textSize="@dimen/font_size_14sp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -31,81 +33,92 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/payment_choise_quantity_height"
-        android:weightSum="1"
-        android:gravity="center"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:background="@color/white">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quantity"
-            android:id="@+id/textView18"
-            android:layout_weight="0.25" />
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:weightSum="1">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:id="@+id/tv_quantity"
-                android:background="@drawable/green_stroke_rectangle"
-                android:layout_weight="0.75" />
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25">
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:id="@+id/btn_quantity_up"
-                    android:background="@drawable/btn_up"
-                    android:layout_marginBottom="1dp" />
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="10dp"
-                    android:layout_height="10dp"
-                    android:id="@+id/btn_quantity_down"
-                    android:background="@drawable/btn_down" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/total"
-            android:id="@+id/textView20"
-            android:layout_weight="0.25" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="26 SGD"
-            android:id="@+id/textView21"
-            android:layout_weight="0.25" />
-    </LinearLayout>
-
-    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.1"
+        android:layout_weight="4"
         android:background="@color/white">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/payment_choise_quantity_height"
+                android:weightSum="1"
+                android:gravity="center"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quantity"
+                    android:id="@+id/textView18"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/font_size_14sp" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:id="@+id/tv_quantity"
+                        android:background="@drawable/green_stroke_rectangle"
+                        android:layout_weight="0.75"
+                        android:textSize="@dimen/font_size_14sp" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.25">
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:id="@+id/btn_quantity_up"
+                            android:background="@drawable/btn_up"
+                            android:layout_marginBottom="1dp" />
+
+                        <Button
+                            style="?android:attr/buttonStyleSmall"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:id="@+id/btn_quantity_down"
+                            android:background="@drawable/btn_down" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total"
+                    android:id="@+id/textView20"
+                    android:layout_weight="0.25" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="26 SGD"
+                    android:id="@+id/textView21"
+                    android:layout_weight="0.25"
+                    android:textSize="@dimen/font_size_14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
@@ -116,19 +129,20 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/payment_option_height"
+            android:layout_height="0dp"
             android:orientation="vertical"
             android:id="@+id/payment_option"
             android:paddingLeft="16dp"
-            android:paddingRight="16dp">
+            android:paddingRight="16dp"
+            android:layout_weight="2">
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="@string/payment_option"
                 android:id="@+id/textView22"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_18sp" />
 
             <LinearLayout
                 android:orientation="horizontal"
@@ -142,267 +156,341 @@
                     android:orientation="horizontal">
 
                     <RadioButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/radioButton"
                         android:checked="false"
-                        android:layout_weight="0.2" />
+                        android:layout_weight="1" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/imageView14"
-                        android:layout_weight="0.2"
+                        android:layout_weight="2"
                         android:src="@drawable/ic_visa" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/imageView15"
-                        android:layout_weight="0.2"
-                        android:src="@drawable/ic_mastercard" />
+                        android:layout_weight="2"
+                        android:src="@drawable/ic_mastercard"
+                        android:layout_marginLeft="16dp" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"></LinearLayout>
 
                     <RadioButton
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/radioButton2"
                         android:checked="false"
-                        android:layout_weight="0.2" />
+                        android:layout_weight="1" />
 
                     <ImageView
-                        android:layout_width="wrap_content"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:id="@+id/imageView16"
-                        android:layout_weight="0.2"
+                        android:layout_weight="2"
                         android:src="@drawable/ic_paypal" />
+
                 </RadioGroup>
 
             </LinearLayout>
 
         </LinearLayout>
 
-        <RelativeLayout
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/info"
+            android:layout_height="0dp"
+            android:layout_weight="6"
             android:paddingLeft="16dp"
             android:paddingRight="16dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
                 android:text="@string/credit_card"
                 android:id="@+id/credit_card"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/first_name"
-                android:id="@+id/label_first_name"
-                android:layout_below="@+id/credit_card"
-                android:layout_marginTop="4dp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/first_name"
-                android:layout_below="@+id/credit_card"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/green_stroke_rectangle"
-                android:layout_marginTop="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/last_name"
-                android:id="@+id/label_last_name"
-                android:layout_below="@+id/first_name"
-                android:layout_marginTop="4dp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:inputType="textPersonName"
-                android:ems="10"
-                android:id="@+id/last_name"
-                android:layout_below="@+id/first_name"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/green_stroke_rectangle"
-                android:layout_marginTop="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/card_number"
-                android:id="@+id/label_card_number"
-                android:layout_below="@+id/last_name"
-                android:layout_marginTop="4dp" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/card_number"
-                android:layout_below="@+id/last_name"
-                android:layout_alignParentRight="true"
-                android:background="@drawable/green_stroke_rectangle"
-                android:layout_marginTop="4dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/expiration_month"
-                android:id="@+id/label_expiration"
-                android:layout_below="@+id/card_number"
-                android:layout_marginTop="4dp" />
+                android:textStyle="bold"
+                android:textSize="@dimen/font_size_18sp"
+                android:layout_weight="1" />
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:weightSum="1"
-                android:id="@+id/expiration"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_below="@+id/card_number"
-                android:layout_toRightOf="@+id/label_expiration">
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="1"
-                    android:id="@+id/tv_expiration"
+                    android:text="@string/first_name"
+                    android:id="@+id/label_first_name"
+                    android:layout_below="@+id/credit_card"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/first_name"
+                    android:layout_below="@+id/credit_card"
+                    android:layout_alignParentRight="true"
                     android:background="@drawable/green_stroke_rectangle"
-                    android:layout_weight="0.75" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25" >
-
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:id="@+id/btn_expiration_up"
-                        android:background="@drawable/btn_up"
-                        android:layout_marginBottom="1dp" />
-
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:id="@+id/btn_expiration_down"
-                        android:background="@drawable/btn_down" />
-                </LinearLayout>
+                    android:layout_weight="1" />
             </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/year"
-                android:id="@+id/label_year"
-                android:layout_below="@+id/card_number"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="8dp"
-                android:layout_toRightOf="@+id/expiration" />
 
             <LinearLayout
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.25"
-                android:weightSum="1"
-                android:id="@+id/year"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="4dp"
-                android:layout_below="@+id/card_number"
-                android:layout_toRightOf="@+id/label_year" >
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:text="2020"
-                    android:id="@+id/tv_year"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/last_name"
+                    android:id="@+id/label_last_name"
+                    android:layout_below="@+id/first_name"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:ems="10"
+                    android:id="@+id/last_name"
+                    android:layout_below="@+id/first_name"
+                    android:layout_alignParentRight="true"
                     android:background="@drawable/green_stroke_rectangle"
-                    android:layout_weight="0.75" />
-
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.25" >
-
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:id="@+id/btn_year_up"
-                        android:background="@drawable/btn_up"
-                        android:layout_marginBottom="1dp" />
-
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="10dp"
-                        android:layout_height="10dp"
-                        android:id="@+id/btn_year_down"
-                        android:background="@drawable/btn_down" />
-                </LinearLayout>
+                    android:layout_weight="1" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/security_code"
-                android:id="@+id/label_security_code"
-                android:layout_below="@+id/label_expiration"
-                android:layout_marginTop="4dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/security_code"
-                android:layout_below="@+id/label_expiration"
-                android:layout_alignParentRight="false"
-                android:background="@drawable/green_stroke_rectangle"
-                android:layout_marginTop="4dp"
-                android:layout_marginLeft="8dp"
-                android:layout_toLeftOf="@+id/img_security"
-                android:layout_toRightOf="@+id/label_security_code" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/card_number"
+                    android:id="@+id/label_card_number"
+                    android:layout_below="@+id/last_name"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_weight="1" />
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/payment_choise_quantity_height"
-                android:id="@+id/img_security"
-                android:layout_below="@+id/label_expiration"
-                android:src="@drawable/ic_security_code"
-                android:layout_alignParentRight="true"
-                android:scaleType="fitCenter" />
-        </RelativeLayout>
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/card_number"
+                    android:layout_below="@+id/last_name"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/green_stroke_rectangle"
+                    android:layout_weight="1" />
+            </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/submit"
-            android:id="@+id/btn_submit"
-            android:layout_gravity="top|center_horizontal"
-            android:background="@color/btn_bg_color"
-            android:layout_marginTop="8dp" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/expiration_month"
+                    android:id="@+id/label_expiration"
+                    android:layout_below="@+id/card_number"
+                    android:layout_marginTop="4dp"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:id="@+id/expiration"
+                        android:layout_below="@+id/card_number"
+                        android:layout_toRightOf="@+id/label_expiration">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="1"
+                            android:id="@+id/tv_expiration"
+                            android:background="@drawable/green_stroke_rectangle"
+                            android:layout_weight="0.75"
+                            android:textSize="@dimen/font_size_14sp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25" >
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:id="@+id/btn_expiration_up"
+                                android:background="@drawable/btn_up"
+                                android:layout_marginBottom="1dp" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:id="@+id/btn_expiration_down"
+                                android:background="@drawable/btn_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="@string/year"
+                        android:id="@+id/label_year"
+                        android:layout_below="@+id/card_number"
+                        android:layout_toRightOf="@+id/expiration"
+                        android:textSize="@dimen/font_size_16sp"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="1"
+                        android:id="@+id/year"
+                        android:layout_below="@+id/card_number"
+                        android:layout_toRightOf="@+id/label_year" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="2020"
+                            android:id="@+id/tv_year"
+                            android:background="@drawable/green_stroke_rectangle"
+                            android:layout_weight="0.75"
+                            android:textSize="@dimen/font_size_14sp" />
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.25" >
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:id="@+id/btn_year_up"
+                                android:background="@drawable/btn_up"
+                                android:layout_marginBottom="1dp" />
+
+                            <Button
+                                style="?android:attr/buttonStyleSmall"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:id="@+id/btn_year_down"
+                                android:background="@drawable/btn_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="@string/security_code"
+                    android:id="@+id/label_security_code"
+                    android:layout_below="@+id/label_expiration"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:textIsSelectable="false"
+                    android:layout_weight="1" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/security_code"
+                        android:layout_below="@+id/label_expiration"
+                        android:layout_alignParentRight="false"
+                        android:background="@drawable/green_stroke_rectangle"
+                        android:layout_toLeftOf="@+id/img_security"
+                        android:layout_toRightOf="@+id/label_security_code"
+                        android:textSize="@dimen/font_size_14sp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:id="@+id/img_security"
+                        android:layout_below="@+id/label_expiration"
+                        android:src="@drawable/ic_security_code"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="fitCenter"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/submit"
+                    android:id="@+id/btn_submit"
+                    android:background="@color/btn_bg_color"
+                    android:textSize="@dimen/font_size_16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 
