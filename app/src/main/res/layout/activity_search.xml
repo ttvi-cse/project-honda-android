@@ -91,7 +91,7 @@
         android:id="@+id/map"
         class="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         xmlns:tools="http://schemas.android.com/tools"
         tools:context=".activity.SearchActivity"
         android:layout_weight="0.1" />

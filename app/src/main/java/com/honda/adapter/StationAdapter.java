@@ -79,7 +79,7 @@ public class StationAdapter extends BaseAdapter {
             layoutItem = (LinearLayout) findViewById(R.id.item_accident_alert_layout);
             tvName = (TextView) findViewById(R.id.tv_name);
             tvAddress = (TextView) findViewById(R.id.tv_address);
-            tvPhoneNumber = (TextView) findViewById(R.id.tv_phone_number);;
+            tvPhoneNumber = (TextView) findViewById(R.id.tv_phone_number);
         }
 
         public void setData(Station station, int pos) {
